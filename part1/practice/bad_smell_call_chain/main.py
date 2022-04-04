@@ -30,7 +30,7 @@ class Planet:
         return Country()
 
 
-class Person:
+class Person1:
     def __init__(self):
         self.planet = Planet()
 
@@ -41,5 +41,41 @@ class Person:
         return self.planet.get_contry().get_city().population()
 
 
-# TODO после выполнения задания попробуйте
+class Person:
+    def __init__(self, planet='Eath', country='country', city='city', street='street', room='room', name='name', population=2):
+        self.planet = planet
+        self.country = country
+        self.city = city
+        self.street = street
+        self.room = room
+        self.name = name
+        self.population = population
+
+    def get_planet(self):
+        return self.planet
+
+    def get_country(self):
+        return self.country
+
+    def get_city(self):
+        return self.city
+
+    def get_street(self):
+        return self.street
+
+    def get_person_room(self):
+        return self.room
+
+    def get_name(self):
+        return self.name
+
+    def get_city_population(self):
+        return self.population
+
+
+person = Person("Eath", "Russia", "Voronezh", "prospect", 42, "Piter", 100500)
+print(person.get_person_room())
+person.get_person_room()
+print(person.get_city_population())
+# после выполнения задания попробуйте
 # сделать экземпляр класса person и вызвать новые методы.
